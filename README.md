@@ -1,4 +1,4 @@
 # Project-2
-this is project num2 for my course
-you can cheek it on my website as well 
+Project V2
+<p>you can cheek it on my website as well </p>
 http://AnmarMashat.sa
