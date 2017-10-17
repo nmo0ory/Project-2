@@ -1,4 +1,12 @@
 # Project-2
+
 Project V2
-<p>you can cheek it on my website as well </p>
+
+you can cheek it on my website as well
 http://AnmarMashat.sa
+
+
+# New Features!
+
+  - CSS
+  - FontAwsome
