@@ -87,13 +87,15 @@ tr:nth-child(even){
 }
 h4{
   border-top:solid;
+  border-bottom:solid 1px;
   border-color:rgba(0,0,0,0.1);
   padding-top:10px;
   
 }
-date{
+data{
   font-style:italic;
   font-size:12px;
+  color:#646464;
 }
 li.blog{
   list-style-image: url('http://anmarmashat.sa/arrow.png');
@@ -139,11 +141,14 @@ li a{
   text-align:center;
   padding: 30px 16px;
   text-decoration:none;
-  font-size:18px;
+  font-size:27px;
   font-weight:bold;
   font-family:"Courier";
   
   
+}
+div.news_feild{
+  padding-bottom:30px;
 }
 li a:hover{
   background-color:#fff;
