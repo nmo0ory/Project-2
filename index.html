@@ -27,64 +27,24 @@
       <li class="nav"><a class="nav" href="news.html">Sumbit News</a></li>
     </ul>
 	</header>	
-	
-		<h4>Main Stories <i class="time">10/02/2017</i> </h4>
-		<!-- post -->
-		<div class="blog_post">
-			<ul>
-				<li  class="blog"><a class="blog_name" href="#">Yarn - A new package manager for JavaScript</a>
-					<ul>
-					<li class="blog_info">1 hour ago | 20 comments</li>
-					</ul>
-				</li>
-			</ul>
+		<div>
+			<h4>Main Stories <i class="time">10/02/2017</i></h4>
+			<select>
+				<option>sorting</option>
+				<option value="likesort" onclick="sortLikes()">likes</option>
+				<option value="commentsort" onclick="sortComment()">Comment</option>
+				<option value="datesort" onclick="sortDate()">Date</option>
+			</select> 
 		</div>
 		
-				<!-- post -->
-		<div class="blog_post">
-			<ul>
-				<li  class="blog"><a class="blog_name" href="#">Blueprint - A React UI toolkit forthe web</a>
-					<ul>
-					<li class="blog_info">1 hour ago | 20 comments</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		
-				<!-- post -->
-		<div class="blog_post">
-			<ul>
-				<li  class="blog"><a class="blog_name" href="#">Tesseract.js - Pure JavaScript OCR</a>
-					<ul>
-					<li class="blog_info">1 hour ago | 20 comments</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		
-				<!-- post -->
-		<div class="blog_post">
-			<ul>
-				<li  class="blog"><a class="blog_name" href="#">Notpad++ - a tools for code and text editor</a>
-					<ul>
-					<li class="blog_info">1 hour ago | 20 comments</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-    
-				<!-- post -->
-		<div class="blog_post">
-			<ul>
-				<li  class="blog"><a class="blog_name" href="#">Yarn - A new package manager for JavaScript</a>
-					<ul>
-					<li class="blog_info">1 hour ago | 20 comments</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
 
 
+
+		<div id="blog_block">
+			<ul class="newsList"></ul>
+			
+
+		</div>
 		
 	<footer>
 		<div>
@@ -111,7 +71,7 @@
 		
 	</body>
 	
-
+	<script src="js/sort.js"></script> 
 
 
 </html>

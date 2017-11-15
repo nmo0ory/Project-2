@@ -12,9 +12,11 @@
 
 	<body class="node">
   <div class="content">
-    <h1>Submit</h1>
-    
-		<div class="news_feild">
+		<h1>Submit</h1>
+		
+		<form name="newsForm" action="/news.html"
+		onsubmit="return validateForm1()" method="post">		
+			<div class="news_feild">
 		 Title: <input type="text" name="Title" > 
 		</div>
     <div class="news_feild">
@@ -27,15 +29,28 @@
 		
 		
     <div class="news_feild">
-      Text: <textarea rows="4" cols="50"> </textarea>
+      Text: <textarea rows="4" cols="50" name="textnews"> </textarea>
     </div>
 		
 
-		<input type="submit" value="Submit">
+		<input type="submit" value="submit"/>
+	    </form>
+		
+		<div id="error1">
+				<p>you need to put your title or url or text</p>
+			</div>
+			<div id="error2">
+					<p>you need to put your url or text</p>
+				</div>
+				<div id="error3">
+						<p>the text field is emty</p>
+					</div>
+		
 		</div>
 		
 	</body>
 	
-
+	<script src="js/news.js"></script> 
+	
 
 </html>

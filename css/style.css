@@ -178,3 +178,24 @@ a.nav_logo{
   font-size:27px;
   font-weight:bold;
 }
+
+div#error1{
+  background-color:#d55959;
+  color: white;
+  padding: 1px 10px;
+  display: none;
+  
+  }
+  div#error2{
+    background-color:#d55959;
+    color: white;
+    padding: 1px 10px;
+    display: none;
+  }
+    div#error3{
+      background-color:#d55959;
+      padding: 1px 10px;
+      color: white;
+      display: none;
+      
+      }
