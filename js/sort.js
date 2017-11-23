@@ -1,44 +1,16 @@
+var TopicList;
+var json1;
+var newsObj = [];
+var index1 = 0;
 
 
-var newsObj = [
-    {   
-        title : "Yarn - A new package manager for JavaScript",
-        date : "Sat Nov 12 2017 7:32:78",
-        like : 125,
-        comments : 56
-    },
-    {   
-        title : "Blueprint - A React UI toolkit forthe web",
-        date : "Wen Nov 11 2017 5:43:43",
-        like : 78,
-        comments : 56
-    },
-    {   
-        title : "Tesseract.js - Pure JavaScript OCR",
-        date : "Tus Nov 11 2017 3:56:41",
-        like : 24,
-        comments : 88
-    },
-    {   
-        title : "Notpad++ - a tools for code and text editor",
-        date : "Sat Nov 10 2017 5:12:32",
-        like : 94,
-        comments : 125 
-    },
-    {   
-        title : "Yarn - A new package manager for JavaScript",
-        date : "Fri Nov 9 2017 12:32:41",
-        like : 568,
-        comments : 489 
-    }
-]
 
 
 
 
 var sotingFunc = function () {
     for (var i = 0; i <= newsObj.length - 1; i++) {
-
+        console.log("Hello")
         var innerli =  document.createElement("li");
         innerli.className = "blog_info"
         innerli.innerHTML = newsObj[i].like + " likes | " + newsObj[i].date +" | "+ newsObj[i].comments + " Comments";
@@ -106,4 +78,50 @@ function sortDate(){
     var outerUl = document.getElementsByClassName("newsList")
     outerUl[0].innerHTML = ""
     sotingFunc()
+}
+
+
+
+(function(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                TopicList = JSON.parse(xhttp.response);
+                //=============================
+                
+                test1();
+                
+                //=============================
+              }
+            };
+            xhttp.open("GET", "https://hacker-news.firebaseio.com/v0/topstories.json", true);
+            xhttp.send();
+   })();
+
+
+ 
+function test1(){
+    for (var index21 = 0; index1 < 31; index1++) {     
+    (function (){
+                   var xhttp1 = new XMLHttpRequest();
+            xhttp1.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                json1 = JSON.parse(xhttp1.response);
+                //document.getElementById("area").innerHTML = json1.title;
+                //====
+                    newsObj.push({
+                    title : json1.title,
+                    date : new Date(json1.time*1000),
+                    like : json1.score,
+                    comments: json1.descendants 
+                })  
+                //====
+              }
+            };
+            xhttp1.open("GET", "https://hacker-news.firebaseio.com/v0/item/"+TopicList[index1]+".json", true);
+            xhttp1.send();
+   }    )();  
+
+}
+
 }
