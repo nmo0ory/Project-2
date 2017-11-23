@@ -4,10 +4,6 @@ var newsObj = [];
 var index1 = 0;
 
 
-
-
-
-
 var sotingFunc = function () {
     for (var i = 0; i <= newsObj.length - 1; i++) {
         console.log("Hello")
@@ -90,7 +86,7 @@ function sortDate(){
                 //=============================
                 
                 test1();
-                
+            
                 //=============================
               }
             };
@@ -109,12 +105,19 @@ function test1(){
                 json1 = JSON.parse(xhttp1.response);
                 //document.getElementById("area").innerHTML = json1.title;
                 //====
+                if(json1.descendants == "undefined "){
+                    json1.descendants = 0;
+                }
                     newsObj.push({
                     title : json1.title,
                     date : new Date(json1.time*1000),
                     like : json1.score,
                     comments: json1.descendants 
-                })  
+                    
+                }) 
+                 outerUl = document.getElementsByClassName("newsList")
+                outerUl[0].innerHTML = ""
+                sotingFunc() 
                 //====
               }
             };
