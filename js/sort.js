@@ -105,7 +105,7 @@ function test1(){
                 json1 = JSON.parse(xhttp1.response);
                 //document.getElementById("area").innerHTML = json1.title;
                 //====
-                if(json1.descendants == "undefined "){
+                if(json1.descendants == "undefined"){
                     json1.descendants = 0;
                 }
                     newsObj.push({
