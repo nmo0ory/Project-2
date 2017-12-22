@@ -1,6 +1,6 @@
 <?php
     //open connection to mysql db
-    $connection = mysqli_connect("localhost","root","","news") or die("Error " . mysqli_error($connection));
+    $connection = mysqli_connect("37.10.113.3","Project5","Project5123","news") or die("Error " . mysqli_error($connection));
     //require('db_connection.php');
 
     //fetch table rows from mysql db

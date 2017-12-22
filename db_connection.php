@@ -1,9 +1,9 @@
 <?php
 
 // WARNING: NEVER DO THIS IN PRODUCTION
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "37.10.113.3";
+$username = "Project5";
+$password = "Project5123";
 $database = "news";
 
 $conn = new mysqli($servername, $username, $password, $database);
