@@ -90,13 +90,14 @@ function sortDate(){
                 //=============================
               }
             };
-            xhttp.open("GET", "../idlist.json", true);
+            xhttp.open("GET", "https://hacker-news.firebaseio.com/v0/topstories.json", true);
             xhttp.send();
    })();
 
 
  
 function test1(){
+    for (var index21 = 0; index1 < 31; index1++) {     
     (function (){
                    var xhttp1 = new XMLHttpRequest();
             xhttp1.onreadystatechange = function() {
@@ -104,27 +105,26 @@ function test1(){
                 json1 = JSON.parse(xhttp1.response);
                 //document.getElementById("area").innerHTML = json1.title;
                 //====
-                
-                for (var i = 0; i < TopicList.length; i++) {
-                newsObj.push({
-                title : json1[i].title,
-                date : json1[i].date,
-                like : json1[i].noc,
-                comments: json1[i].comments
+                if(json1.descendants == "undefined"){
+                    json1.descendants = 0;
+                }
+                    newsObj.push({
+                    title : json1.title,
+                    date : new Date(json1.time*1000),
+                    like : json1.score,
+                    comments: json1.descendants 
                     
                 }) 
-                outerUl = document.getElementsByClassName("newsList")
+                 outerUl = document.getElementsByClassName("newsList")
                 outerUl[0].innerHTML = ""
                 sotingFunc() 
                 //====
-                }
-
               }
             };
-            xhttp1.open("GET", "../postdata.json", true);
+            xhttp1.open("GET", "https://hacker-news.firebaseio.com/v0/item/"+TopicList[index1]+".json", true);
             xhttp1.send();
-   }    )();
+   }    )();  
 
-
+}
 
 }
